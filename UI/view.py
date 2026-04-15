@@ -28,10 +28,10 @@ class View(ft.UserControl):
 
 
         #row1
-        self.ddAnno = ft.Dropdown(label="anno",  options=[ft.dropdown.Option("Nessun filtro")], width=300)
+        self.ddAnno = ft.Dropdown(label="anno", options=[ft.dropdown.Option("Nessun filtro")], width=300)
         self._controller.fillddAnno()
 
-        self.ddBrand = ft.Dropdown(label="brand", width=300)
+        self.ddBrand = ft.Dropdown(label="brand", options=[ft.dropdown.Option("Nessun filtro")], width=300)
         self._controller.fillddBrand()
 
         self.ddRetailer = ft.Dropdown(label="retailer", expand=True)

@@ -6,3 +6,9 @@ class Model:
 
     def getAnno(self):
         return DAO.getAnno()
+
+    def getBrand(self):
+        return DAO.getBrand()
+
+    def getRetailer(self):
+        return DAO.getRetailer()
