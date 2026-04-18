@@ -28,13 +28,13 @@ class View(ft.UserControl):
 
 
         #row1
-        self.ddAnno = ft.Dropdown(label="anno", options=[ft.dropdown.Option("Nessun filtro")], width=300)
+        self.ddAnno = ft.Dropdown(label="anno", options=[ft.dropdown.Option("Nessun filtro", data=None)], width=300)
         self._controller.fillddAnno()
 
         self.ddBrand = ft.Dropdown(label="brand", options=[ft.dropdown.Option("Nessun filtro")], width=300)
         self._controller.fillddBrand()
 
-        self.ddRetailer = ft.Dropdown(label="retailer", expand=True)
+        self.ddRetailer = ft.Dropdown(label="retailer", options=[ft.dropdown.Option("Nessun filtro", )], expand=True)
         self._controller.fillddRetailer()
 
         row1=ft.Row([self.ddAnno, self.ddBrand, self.ddRetailer], alignment= ft.MainAxisAlignment.CENTER)
