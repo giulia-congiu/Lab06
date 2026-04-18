@@ -91,8 +91,7 @@ class Controller:
         numProd = len(Counter(s.Product_number for s in sales))
 
         self._view.txt_result.controls.clear()
-        for s in sales:
-            self._view.txt_result.controls.append(ft.Text(f"Statistiche vendite:\n"
+        self._view.txt_result.controls.append(ft.Text(f"Statistiche vendite:\n"
                                                           f"Giro d'affari: {giro_Daffari}\n"
                                                           f"Numero vendite {numvend}\n"
                                                           f"Numero retailer coinvolti {rtCoinvolti}\n"
