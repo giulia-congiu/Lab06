@@ -80,19 +80,19 @@ class Controller:
             self._view.update_page()
             return
 
-        giro_Daffari= 0
+        giro_Daffari= 0.0
         for s in sales:
-            ricavo= int(s.ricavo)
+            ricavo= float(s.ricavo)
             giro_Daffari += ricavo
 
-        numvend = len(Counter(sales))
+        numvend = len(sales)
 
         rtCoinvolti = len(Counter(s.Retailer_code for s in sales))
         numProd = len(Counter(s.Product_number for s in sales))
 
         self._view.txt_result.controls.clear()
         self._view.txt_result.controls.append(ft.Text(f"Statistiche vendite:\n"
-                                                          f"Giro d'affari: {giro_Daffari}\n"
+                                                          f"Giro d'affari: {round(giro_Daffari,2)}\n"
                                                           f"Numero vendite {numvend}\n"
                                                           f"Numero retailer coinvolti {rtCoinvolti}\n"
                                                           f"Numero prodotti coinvolti {numProd}"))
